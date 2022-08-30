@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtUpdateNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="15dp"
+        android:hint="Nome"
+        />
+
+    <EditText
+        android:id="@+id/edtUpdateEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="15dp"
+        android:hint="Email"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnUpdateUser"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="casual"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/btnUpdateCancel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="casual"
+            android:text="Cancelar"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            app:cornerRadius="5dp" />
+
+        </LinearLayout>
+
+</LinearLayout>
