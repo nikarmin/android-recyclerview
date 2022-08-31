@@ -2,7 +2,7 @@ package com.example.recyclerviewproject;
 
 public class Usuario
 {
-    String nome, email;
+    private String nome, email;
 
     public String getNome() { return nome; }
 
