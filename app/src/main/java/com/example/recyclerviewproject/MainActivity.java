@@ -1,5 +1,6 @@
 package com.example.recyclerviewproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -75,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position, Usuario userData) {
                 builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Usuário alterado");
+                builder.setTitle("Alterar usuário");
                 builder.setCancelable(false);
                 View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.dialogedit, null, false);
-                initUpdateDialog(position, view);
+                initUpdateDialog(position, view, userData);
                 builder.setView(view);
                 dialog = builder.create();
                 dialog.show();
@@ -87,14 +88,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void initUpdateDialog(int position, View view) {
+    private void initUpdateDialog(int position, @NonNull View view, Usuario userData) {
         edtUpdateNome = view.findViewById(R.id.edtUpdateNome);
         edtUpdateEmail = view.findViewById(R.id.edtUpdateEmail);
         btnUpdateCancel = view.findViewById(R.id.btnUpdateCancel);
         btnUpdateUser = view.findViewById(R.id.btnUpdateUser);
 
-        edtUpdateNome.setText(nome);
-        edtUpdateEmail.setText(email);
+        edtUpdateNome.setText(userData.getNome().toString());
+        edtUpdateEmail.setText(userData.getEmail().toString());
 
         btnUpdateUser.setOnClickListener(new View.OnClickListener() {
             @Override
